@@ -24,4 +24,4 @@ For more, see <https://observablehq.com/framework/getting-started>.
 
 <img width="1348" height="593" alt="image" src="https://github.com/user-attachments/assets/0c04ae12-5be5-4e11-b170-af3029df4575" />
 
-Link: gabrielsilva08.github.io/final_project_viz/
+Link: <https://gabrielsilva08.github.io/final_project_viz/>

@@ -7,28 +7,30 @@ toc: false
 </div>
 
 <!-- Treemap + graph -->
-<h2> Top 1000 best games (according to Metacritic)</h1>
+<h2> Top 1000 best games (according to Metacritic)</h2>
 
-<div id="observablehq-viewof-includeAllYears-416a10b6"></div>
-<div id="observablehq-viewof-selectedYearFilter-416a10b6"></div>
-<div id="observablehq-viewof-selectedGenreFilter-416a10b6"></div>
-<div id="observablehq-viewof-NodeLinkChart-416a10b6"></div>
-<div id="observablehq-legend1-416a10b6"></div>
+<div id="observablehq-viewof-includeAllYears-9b8ffd05"></div>
+<div id="observablehq-viewof-selectedYearFilter-9b8ffd05"></div>
+<div id="observablehq-viewof-selectedGenreFilter-9b8ffd05"></div>
+<div id="observablehq-viewof-NodeLinkChart-9b8ffd05"></div>
+<div id="observablehq-legend1-9b8ffd05"></div>
 </br>
 <h2>Popular Game Genres by Year</h2>
-<div id="observablehq-viewof-TreemapChart-416a10b6"></div>
+<div id="observablehq-viewof-selectedYear-9b8ffd05"></div>
+<div id="observablehq-viewof-TreemapChart-9b8ffd05"></div>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/d/dab8c2e1d07fb1a3@854.js?v=4";
+import define from "https://api.observablehq.com/d/dab8c2e1d07fb1a3@879.js?v=4";
 new Runtime().module(define, name => {
-  if (name === "viewof includeAllYears") return new Inspector(document.querySelector("#observablehq-viewof-includeAllYears-416a10b6"));
-  if (name === "viewof selectedYearFilter") return new Inspector(document.querySelector("#observablehq-viewof-selectedYearFilter-416a10b6"));
-  if (name === "viewof selectedGenreFilter") return new Inspector(document.querySelector("#observablehq-viewof-selectedGenreFilter-416a10b6"));
-  if (name === "viewof NodeLinkChart") return new Inspector(document.querySelector("#observablehq-viewof-NodeLinkChart-416a10b6"));
-  if (name === "legend1") return new Inspector(document.querySelector("#observablehq-legend1-416a10b6"));
-  if (name === "viewof TreemapChart") return new Inspector(document.querySelector("#observablehq-viewof-TreemapChart-416a10b6"));
+  if (name === "viewof includeAllYears") return new Inspector(document.querySelector("#observablehq-viewof-includeAllYears-9b8ffd05"));
+  if (name === "viewof selectedYearFilter") return new Inspector(document.querySelector("#observablehq-viewof-selectedYearFilter-9b8ffd05"));
+  if (name === "viewof selectedGenreFilter") return new Inspector(document.querySelector("#observablehq-viewof-selectedGenreFilter-9b8ffd05"));
+  if (name === "viewof NodeLinkChart") return new Inspector(document.querySelector("#observablehq-viewof-NodeLinkChart-9b8ffd05"));
+  if (name === "legend1") return new Inspector(document.querySelector("#observablehq-legend1-9b8ffd05"));
+  if (name === "viewof selectedYear") return new Inspector(document.querySelector("#observablehq-viewof-selectedYear-9b8ffd05"));
+  if (name === "viewof TreemapChart") return new Inspector(document.querySelector("#observablehq-viewof-TreemapChart-9b8ffd05"));
   return ["filteredData","degreesMap","degreeScale"].includes(name);
 });
 </script>

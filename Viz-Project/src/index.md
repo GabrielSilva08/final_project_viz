@@ -6,64 +6,66 @@ toc: false
   <h1>Level Up: Uma Jornada Visual pela Indústria dos Jogos</h1>
 </div>
 
-<div class="grid grid-cols-2" style="grid-auto-rows: 504px;">
-  <div class="card">${
-    resize((width) => Plot.plot({
-      title: "Top 1000 best game...",
-      subtitle: "according by Metacritic!",
-      width,
-      y: {grid: true, label: "Awesomeness"},
-      marks: [
-        Plot.ruleY([0]),
-        Plot.lineY(aapl, {x: "Date", y: "Close", tip: true})
-      ]
-    }))
-  }</div>
-  <div class="card">${
-    resize((width) => Plot.plot({
-      title: "How big are penguins, anyway? 🐧",
-      width,
-      grid: true,
-      x: {label: "Body mass (g)"},
-      y: {label: "Flipper length (mm)"},
-      color: {legend: true},
-      marks: [
-        Plot.linearRegressionY(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species"}),
-        Plot.dot(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species", tip: true})
-      ]
-    }))
-  }</div>
-</div>
+<!-- Treemap + graph -->
+<h2> Top 1000 best games (according to Metacritic)</h1>
+
+<div id="observablehq-viewof-includeAllYears-416a10b6"></div>
+<div id="observablehq-viewof-selectedYearFilter-416a10b6"></div>
+<div id="observablehq-viewof-selectedGenreFilter-416a10b6"></div>
+<div id="observablehq-viewof-NodeLinkChart-416a10b6"></div>
+<div id="observablehq-legend1-416a10b6"></div>
+</br>
+<h2>Popular Game Genres by Year</h2>
+<div id="observablehq-viewof-TreemapChart-416a10b6"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/dab8c2e1d07fb1a3@854.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "viewof includeAllYears") return new Inspector(document.querySelector("#observablehq-viewof-includeAllYears-416a10b6"));
+  if (name === "viewof selectedYearFilter") return new Inspector(document.querySelector("#observablehq-viewof-selectedYearFilter-416a10b6"));
+  if (name === "viewof selectedGenreFilter") return new Inspector(document.querySelector("#observablehq-viewof-selectedGenreFilter-416a10b6"));
+  if (name === "viewof NodeLinkChart") return new Inspector(document.querySelector("#observablehq-viewof-NodeLinkChart-416a10b6"));
+  if (name === "legend1") return new Inspector(document.querySelector("#observablehq-legend1-416a10b6"));
+  if (name === "viewof TreemapChart") return new Inspector(document.querySelector("#observablehq-viewof-TreemapChart-416a10b6"));
+  return ["filteredData","degreesMap","degreeScale"].includes(name);
+});
+</script>
 
 ---
 
-## Next steps
+<!-- Remaing graphics -->
 
-Here are some ideas of things you could try…
+<div id="observablehq-viewof-anoSelecionado-c7dc6688"></div>
+<div id="observablehq-viewof-view-c7dc6688"></div>
 
-<div class="grid grid-cols-4">
-  <div class="card">
-    Chart your own data using <a href="https://observablehq.com/framework/lib/plot"><code>Plot</code></a> and <a href="https://observablehq.com/framework/files"><code>FileAttachment</code></a>. Make it responsive using <a href="https://observablehq.com/framework/javascript#resize(render)"><code>resize</code></a>.
-  </div>
-  <div class="card">
-    Create a <a href="https://observablehq.com/framework/project-structure">new page</a> by adding a Markdown file (<code>whatever.md</code>) to the <code>src</code> folder.
-  </div>
-  <div class="card">
-    Add a drop-down menu using <a href="https://observablehq.com/framework/inputs/select"><code>Inputs.select</code></a> and use it to filter the data shown in a chart.
-  </div>
-  <div class="card">
-    Write a <a href="https://observablehq.com/framework/loaders">data loader</a> that queries a local database or API, generating a data snapshot on build.
-  </div>
-  <div class="card">
-    Import a <a href="https://observablehq.com/framework/imports">recommended library</a> from npm, such as <a href="https://observablehq.com/framework/lib/leaflet">Leaflet</a>, <a href="https://observablehq.com/framework/lib/dot">GraphViz</a>, <a href="https://observablehq.com/framework/lib/tex">TeX</a>, or <a href="https://observablehq.com/framework/lib/duckdb">DuckDB</a>.
-  </div>
-  <div class="card">
-    Ask for help, or share your work or ideas, on our <a href="https://github.com/observablehq/framework/discussions">GitHub discussions</a>.
-  </div>
-  <div class="card">
-    Visit <a href="https://github.com/observablehq/framework">Framework on GitHub</a> and give us a star. Or file an issue if you’ve found a bug!
-  </div>
-</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/dab8c2e1d07fb1a3@819.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "viewof anoSelecionado") return new Inspector(document.querySelector("#observablehq-viewof-anoSelecionado-c7dc6688"));
+  if (name === "viewof view") return new Inspector(document.querySelector("#observablehq-viewof-view-c7dc6688"));
+  return ["dadosFiltrados","graficoBarras"].includes(name);
+});
+</script>
+
+---
+
+<!-- Table -->
+<h2> Most selling games</h2>
+
+<div id="observablehq-viewof-table-16efeadf"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/dab8c2e1d07fb1a3@825.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "viewof table") return new Inspector(document.querySelector("#observablehq-viewof-table-16efeadf"));
+});
+</script>
 
 <style>
 
@@ -105,5 +107,4 @@ Here are some ideas of things you could try…
     font-size: 90px;
   }
 }
-
 </style>
